@@ -18,9 +18,6 @@ test: test-loader test-cloader
 
 .PHONY: test-docker
 test-docker:
-	# Add these lines to speed up subsequent builds a bit
-	# -v /tmp/go-plugin/gopath:/root/go
-	# -v /tmp/go-plugin/gocache:/root/.cache/go-build
 	docker run --rm -it \
 		--name golang-plugin \
 		-v $$PWD:/src \
