@@ -40,7 +40,7 @@ test-loader: loader
 .PHONY: cloader
 cloader: out pow
 	go build -buildmode=c-shared -o out/cloader.so ./cloader/loader.go
-	gcc -ldl -o out/cloader-main ./cloader/main.c
+	gcc -o out/cloader-main ./cloader/main.c -ldl
 
 .PHONY: test-cloader
 test-cloader: cloader
